@@ -1,0 +1,10 @@
+<div class="container">
+  <h4>Cursos disponibles</h4>
+  <ol>
+    <li *ngFor="let curso of cursos" [ngClass]="{
+      item:curso
+    }">
+      {{ curso }}
+    </li>
+  </ol>
+</div>

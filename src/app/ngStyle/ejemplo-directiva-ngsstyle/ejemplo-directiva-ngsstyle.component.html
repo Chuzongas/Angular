@@ -1,0 +1,10 @@
+<div class="container">
+  <h4>Introduzca la puntuacion del Alumno</h4>
+  <input type="text" [(ngModel)] = "puntuacion">
+  <h4 style="display: inline-block">Puntuacion obtenida:&nbsp;</h4>
+  <h4 style="display: inline-block" [ngStyle] = "{color:setColor()}">{{ puntuacion }}</h4>
+
+  <hr>
+  
+
+</div>

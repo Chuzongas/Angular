@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="last_name" type="text" class="validate" [(ngModel)] = "nombre">
+      <label for="last_name">Nombre y apellidos</label>
+    </div>
+    <div id="boton" class="col s6">
+      <button type="submit" class="btn waves-light waves-effect green" *ngIf="nombre; else desactivado" ><i class="material-icons right">send</i>
+        Enviar
+      </button>
+      <ng-template #desactivado>
+        <button class="btn disabled"><i class="material-icons right">send</i>
+          Enviar
+        </button>
+      </ng-template> 
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <h3>¿Cuál es la capital de España?</h3>
+  <input type="text" [(ngModel)]="capital">
+  <h3 *ngIf="!capital; else correcto">Complete la pregunta</h3>
+  <ng-template #correcto>
+    <h4 *ngIf="setResultado() ; else incorrecto">¡Correcto!</h4>
+  </ng-template>
+    <ng-template #incorrecto>
+    <h4>Lo siento, inténtelo de nuevo</h4>
+  </ng-template>
+</div>

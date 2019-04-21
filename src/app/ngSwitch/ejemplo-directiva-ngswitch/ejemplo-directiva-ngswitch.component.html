@@ -1,0 +1,26 @@
+<div class="container">
+  <ul *ngFor="let jugador of jugadores" [ngSwitch]="jugador.equipo">
+    <li *ngSwitchCase="'Angular 7'" class="blue-text">
+      <h3>{{ jugador.nombre }}</h3>
+      <h3>{{ jugador.equipo }}</h3>
+    </li>
+    <li *ngSwitchCase="'Los leiikers:0'" class="red-text">
+        <h3>{{ jugador.nombre }}</h3>
+        <h3>{{ jugador.equipo }}</h3>
+      </li>
+  </ul>
+</div>
+
+<!-- <div class="text-center">
+    <ul *ngFor="let jugador of jugadores" [ngSwitch]="jugador.equipo"> ①
+    <li *ngSwitchCase="'L.A. Lakers'"
+   class="lakers"><h3>{{jugador.nombre}}</h3><h3 class="equipo"> {{ ②
+   jugador.equipo}} </h3></li>
+    <li *ngSwitchCase="'Boston Celtics'"
+   class="celtics"><h3>{{jugador.nombre}}</h3><h3 class="equipo"> {{
+   jugador.equipo}} </h3></li>
+    <li *ngSwitchCase="'Chicago Bulls'"
+   class="bulls"><h3>{{jugador.nombre}}</h3><h3 class="equipo"> {{
+   jugador.equipo}} </h3></li>
+    </ul>
+   </div> -->
